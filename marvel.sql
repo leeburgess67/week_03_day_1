@@ -236,7 +236,7 @@ SELECT * FROM movies;
 UPDATE movies SET show_time = '21:05' WHERE id = 16;
 SELECT * FROM movies;
 
--- id |                title                | year | show_time 
+-- id |                title                | year | show_time
 -- ----+-------------------------------------+------+-----------
 --  1 | Iron Man                            | 2008 | 23:55
 --  2 | The Incredible Hulk                 | 2008 | 12:10
@@ -262,3 +262,25 @@ SELECT * FROM movies;
 -- ## Extension
 --
 -- 1.  Research how to delete multiple entries from your table in a single command.
+
+
+DELETE FROM movies
+where id between 1 and 4;
+SELECT * FROM movies;
+-- 
+-- ----+-------------------------------------+------+-----------
+--   5 | Captain America: The First Avenger  | 2011 | 16:55
+--   6 | Avengers Assemble                   | 2012 | 13:25
+--   7 | Iron Man 3                          | 2013 | 23:15
+--   8 | Thor: The Dark World                | 2013 | 16:50
+--  10 | Captain America: The Winter Soldier | 2014 | 14:55
+--  11 | Guardians of the Galaxy             | 2014 | 19:05
+--  12 | Avengers: Age of Ultron             | 2015 | 17:45
+--  13 | Ant-Man                             | 2015 | 16:30
+--  14 | Captain America: Civil War          | 2016 | 16:00
+--  15 | Doctor Strange                      | 2016 | 16:10
+--  17 | Spider-Man: Homecoming              | 2017 | 13:50
+--  18 | Thor: Ragnarok                      | 2017 | 14:40
+--  19 | Black Panther                       | 2018 | 15:00
+--  20 | Avengers: Infinity War              | 2010 | 00:00
+--  16 | Guardians of the Galaxy 2           | 2017 | 21:05
