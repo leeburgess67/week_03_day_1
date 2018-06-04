@@ -146,12 +146,69 @@ SELECT name FROM people WHERE name = 'Lee	Burgess';
 
 --
 -- 5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+DELETE FROM movies WHERE title = 'Batman Begins';
 --
 -- 6.  Create a new entry in the 'people' table with the name of one of the instructors.
+INSERT INTO people (name) VALUES ('John Harper');
+SELECT name FROM people;
+-- name
+-- ---------------------------
+-- Shaun   Adams
+-- James   Amos
+-- Lee     Burgess
+-- Stuart  Charters
+-- Wil     Cornish
+-- Gregor  Cox
+-- Chris   Craig
+-- Gabriel González Villalba
+-- James   Henderson
+-- Edward  Kinley
+-- Magdalena       Kisala
+-- Emily Milne
+-- Iona    Macbeth
+-- Gary    Muir
+-- Helen   Oshea
+-- David   Pears
+-- Benjamin        Robinson
+-- Stephen Rooney
+-- Can     Toraman
+-- Daniel  Warren
+-- Jesus   Perez
+-- John Harper
 --
 -- 7.  Emily Milne has decided to hijack our movie evening, Remove her from the table of people.
+DELETE FROM people WHERE name = 'Emily Milne';
+SELECT name FROM people;
+-- name
+-- ---------------------------
+-- Shaun   Adams
+-- James   Amos
+-- Lee     Burgess
+-- Stuart  Charters
+-- Wil     Cornish
+-- Gregor  Cox
+-- Chris   Craig
+-- Gabriel González Villalba
+-- James   Henderson
+-- Edward  Kinley
+-- Magdalena       Kisala
+-- Iona    Macbeth
+-- Gary    Muir
+-- Helen   Oshea
+-- David   Pears
+-- Benjamin        Robinson
+-- Stephen Rooney
+-- Can     Toraman
+-- Daniel  Warren
+-- Jesus   Perez
+-- John Harper
+-- (21 rows)
+
 --
 -- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
+
+INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2010, '00:00');
+SELECT * FROM movies;
 --
 -- 9.  The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
 --
